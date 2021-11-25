@@ -11,42 +11,40 @@
 <body>
     <div class='container'>
         <div class="box">
-            <h1>Password Generator</h1>
-            <label  class="label">Choose the password length</label><br>
+            <h1 class="title">Password Generator</h1>
+            <label  class="label">Chose your length and just press Go!</label><br>
               
             <div class="field"> 
               <div class="control">
                 <input class="number" type="number" name="length" id="length" placeholder="Length">
-                <br>
-                <label class="checkbox">
-                  <input type="checkbox">
-                  Remember me
-                </label>
-                <br>
-                <label class="checkbox">
-                  <input type="checkbox">
-                  Remember me
-                </label>         <br>
-                <label class="checkbox">
-                  <input type="checkbox">
-                  Remember me
-                </label>   <br>
-                <label class="checkbox">
-                  <input type="checkbox">
-                  Remember me
-                </label>
               </div>
             </div>
-          
             <div class="field">
+              <label class="checkbox">
+                <input type="checkbox" checked="true" id='letters'>
+               Letters
+              </label><br>
+              <label class="checkbox">
+                <input type="checkbox" checked="true" id='numbers'>
+                Numbers
+              </label>
+              <br>
+              <label class="checkbox">
+                <input type="checkbox" checked="true" id='specials'>
+                Specials (ç@#$%&*)
+              </label>
+              
+            </div>       
+            <br>   
+            <div class="field">
+              <button class="button is-primary" onclick='generatePassword()' e.preventDefaut()> Go!</button>
+              <hr>
               <label class="label">Password:</label>
               <div class="control">
                 <input class="input" type="text" name="password" id="password">
               </div>
             </div>
-          
-            <button class="button is-primary" onclick='generatePassword()' e.preventDefaut()> Go!</button>
-        </div>
+            </div>
     </div>
 
         <script src="script.js"></script>
